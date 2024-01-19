@@ -15,7 +15,7 @@
   
 # Install Zabbix Agent for Centos 7.9
 - sudo rpm -Uvh https://repo.zabbix.com/zabbix/6.4/rhel/7/x86_64/zabbix-release-6.4-1.el7.noarch.rpm
-- sudo yum install zabbix-agent
+- sudo yum install zabbix-agent -y
 - sudo nano /etc/zabbix/zabbix_agentd.conf
   + Server=IP Zabbix Proxy,IP local
   + ServerActive=IP Zabbix Proxy,IP local
