@@ -13,3 +13,5 @@
 - systemctl enable zabbix-agent
 - systemctl status zabbix-agent
   
+# Install Zabbix Agent for Centos 7.9
+- 
