@@ -35,9 +35,9 @@
   + Server=IP Zabbix Proxy,IP local
   + ServerActive=IP Zabbix Proxy,IP local
   + Hostname=Name server
-- firewall-cmd --zone=public --add-port=10050/tcp --permanent
-- firewall-cmd --zone=public --add-port=10051/tcp --permanent
-- firewall-cmd --reload
+- sudo ufw enable
+- ufw allow 10050/tcp
+- ufw allow 10051/tcp
 - systemctl start zabbix-agent
 - systemctl enable zabbix-agent
 - systemctl status zabbix-agent
