@@ -26,3 +26,18 @@
 - systemctl start zabbix-agent
 - systemctl enable zabbix-agent
 - systemctl status zabbix-agent
+
+# Install Zabbix Agent for Ubuntu 22.04
+- wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
+- dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
+- apt install zabbix-agent
+- sudo nano /etc/zabbix/zabbix_agentd.conf
+  + Server=IP Zabbix Proxy,IP local
+  + ServerActive=IP Zabbix Proxy,IP local
+  + Hostname=Name server
+- firewall-cmd --zone=public --add-port=10050/tcp --permanent
+- firewall-cmd --zone=public --add-port=10051/tcp --permanent
+- firewall-cmd --reload
+- systemctl start zabbix-agent
+- systemctl enable zabbix-agent
+- systemctl status zabbix-agent
